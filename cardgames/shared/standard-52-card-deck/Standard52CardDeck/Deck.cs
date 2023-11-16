@@ -14,7 +14,7 @@ public class Deck
 
     public void InitDeck() {
         this.cards = new Stack<Card>();
-        this.dealedCards = new Dictionary<Card, String>();
+        this.dealedCards = new Dictionary<Card, string>();
         this.discardCards = new Stack<Card>();
 
         foreach (Suit suit in Enum.GetValues(typeof(Suit)))

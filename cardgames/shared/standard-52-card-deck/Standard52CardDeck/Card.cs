@@ -2,11 +2,25 @@
 
 public class Card
 {
-    public int CardNumber { get; set; }
-    public enum CardSuit { get; set; }
+    public int CardNumber { get;}
+    public enum CardSuit { get;}
 
     public Card(int cardNumber, CardSuit cardSuit) {
         CardNumber = cardNumber;
         CardSuit = cardSuit;
+    }
+
+    public string GetCardName() {
+        switch (CardNumber) {
+            case 1: return "Ace";
+            case 11: return "Jack";
+            case 12: return "Queen";
+            case 13: return "King";
+            default: return CardNumber.ToString();
+        }
+    }
+
+    public override string ToString() {
+        return $"{this.GetCardName()} of {CardSuit}";
     }
 }

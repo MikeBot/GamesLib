@@ -3,6 +3,14 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "cardgames", "cardgames", "{765580B4-09E2-4D71-8625-FF905868CD38}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "shared", "shared", "{2D0597F7-8543-4BE2-999D-079791E250A4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Standard52CardDeckTest", "cardgames\shared\Standard52CardDeckTest\Standard52CardDeckTest.csproj", "{B5E465EB-D5F2-44FB-8336-99DFBF4CAFEA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Standard52CardDeck", "cardgames\shared\Standard52CardDeck\Standard52CardDeck.csproj", "{F1EF8F62-5D16-4D2C-9DD8-9CB6C74BF938}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -10,5 +18,20 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B5E465EB-D5F2-44FB-8336-99DFBF4CAFEA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B5E465EB-D5F2-44FB-8336-99DFBF4CAFEA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B5E465EB-D5F2-44FB-8336-99DFBF4CAFEA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B5E465EB-D5F2-44FB-8336-99DFBF4CAFEA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F1EF8F62-5D16-4D2C-9DD8-9CB6C74BF938}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F1EF8F62-5D16-4D2C-9DD8-9CB6C74BF938}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F1EF8F62-5D16-4D2C-9DD8-9CB6C74BF938}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F1EF8F62-5D16-4D2C-9DD8-9CB6C74BF938}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{2D0597F7-8543-4BE2-999D-079791E250A4} = {765580B4-09E2-4D71-8625-FF905868CD38}
+		{B5E465EB-D5F2-44FB-8336-99DFBF4CAFEA} = {2D0597F7-8543-4BE2-999D-079791E250A4}
+		{F1EF8F62-5D16-4D2C-9DD8-9CB6C74BF938} = {2D0597F7-8543-4BE2-999D-079791E250A4}
 	EndGlobalSection
 EndGlobal

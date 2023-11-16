@@ -3,9 +3,9 @@
 public class Card
 {
     public int CardNumber { get;}
-    public enum CardSuit { get;}
+    public Suit CardSuit { get;}
 
-    public Card(int cardNumber, CardSuit cardSuit) {
+    public Card(int cardNumber, Suit cardSuit) {
         CardNumber = cardNumber;
         CardSuit = cardSuit;
     }

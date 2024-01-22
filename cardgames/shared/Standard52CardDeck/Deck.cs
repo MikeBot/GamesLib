@@ -32,9 +32,8 @@ public class Deck
 
     public void Shuffle() {
         List<Card> cardsList = this.Cards.ToList();
-        cardsList.OrderBy(x=> Random.Shared.Next()).ToList();
 
-        this.Cards = new Stack<Card>(cardsList);
+        this.Cards = new Stack<Card>(cardsList.OrderBy(x => Random.Shared.Next()).ToList());
     }
 
     public Card Deal(string cardReceiver) {

@@ -6,7 +6,7 @@ public class CombinationChecker
 {
     public static (Card[], CombinationType) GetBestCombination(Card[] holeCards, Card[] communityCards)
     {
-        
+
         //TODO: Implement
         return ([], CombinationType.HIGH_CARD);
     }
@@ -17,13 +17,13 @@ public class CombinationChecker
         return [];
     }
 
-    private static Card[] CheckForPair(Card[] cards)
+    private static Card[] CheckForPair(Card[] cards, Card[] communityCards)
     {
         // TODO: Implement
         return [];
     }
 
-    private static Card[] CheckForTwoPairs(Card[] cards)
+    private static Card[] CheckForTwoPairs(Card[] cards, Card[] communityCards)
     {
         // TODO: Implement
         return [];

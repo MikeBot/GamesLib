@@ -4,6 +4,13 @@ using Standard52CardDeck;
 
 public class CombinationChecker
 {
+    public static (Card[], CombinationType) GetBestCombination(Card[] holeCards, Card[] communityCards)
+    {
+        
+        //TODO: Implement
+        return ([], CombinationType.HIGH_CARD);
+    }
+
     private static Card[] CheckForHighCard(Card[] holeCards, Card[] communityCards)
     {
         // TODO: Implement

@@ -43,9 +43,25 @@ public class Deck
         return dealedCard;
     }
 
+    public Card[] DealMultiple(int timesDealed, string cardReceiver) {
+        Card[] dealedCards = new Card[timesDealed];
+        for(int i = 0; i < timesDealed; i++) {
+            dealedCards[i] = this.Cards.Pop();
+            this.DealedCards.Add(dealedCards[i], cardReceiver);
+        }
+
+        return dealedCards;
+    }
+
     public void Discard(Card card) {
         this.DealedCards.Remove(card);
         this.DiscardPile.Push(card);
+    }
+
+    public void DiscardMultiple(Card[] cards) {
+        foreach(Card card in cards) {
+            this.Discard(card);
+        }
     }
 
     public void DiscardFromDeck(int nummberOfCards) {

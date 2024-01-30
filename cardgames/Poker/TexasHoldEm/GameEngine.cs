@@ -10,7 +10,7 @@ class GameEngine
     public List<Player> Spectators { get; set; }
     public List<Card> CommunityCards { get; set; }
     public Chip[] Pot { get; set; }
-    public Dictionary<Player[], Chip[]> SidePots = new Dictionary<Player[], Chip[]>();
+    public Dictionary<Player[], Chip[]> SidePots { get; set; }
     public Deck CardDeck { get; set; }
 
     public GameEngine() {
@@ -69,5 +69,21 @@ class GameEngine
             this.CommunityCards.AddRange(drawnCards);
             return drawnCards;
         } else return [];
+    }
+
+    public Card? DrawTurnCard() {
+        if(this.CommunityCards.Count == 3 && this.GameStage == GameStageType.TURN) {
+            Card drawnTurnCard = this.CardDeck.Deal("Community Cards");
+            this.CommunityCards.Add(drawnTurnCard);
+            return drawnTurnCard;
+        } else return null;
+    }
+
+    public Card? DrawRiverCard() {
+        if(this.CommunityCards.Count == 4 && this.GameStage == GameStageType.RIVER) {
+            Card drawnRiverCard = this.CardDeck.Deal("Community Cards");
+            this.CommunityCards.Add(drawnRiverCard);
+            return drawnRiverCard;
+        } else return null;
     }
 }

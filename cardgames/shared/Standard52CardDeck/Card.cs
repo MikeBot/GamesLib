@@ -10,7 +10,7 @@ public class Card
         CardSuit = cardSuit;
     }
 
-    public string GetCardName() {
+    public string GetCardValueName() {
         switch (CardNumber) {
             case 1: return "Ace";
             case 11: return "Jack";
@@ -20,7 +20,18 @@ public class Card
         }
     }
 
+        public string GetCardValueSymbol() {
+        switch (CardNumber) {
+            case 1: return "A";
+            case 11: return "J";
+            case 12: return "Q";
+            case 13: return "K";
+            default: return CardNumber.ToString();
+        }
+    }
+
+
     public override string ToString() {
-        return $"{this.GetCardName()} of {CardSuit}";
+        return $"{this.GetCardValueName()} of {CardSuit}";
     }
 }
